@@ -3,17 +3,17 @@ DMM WEBCAMPのポートフォリオ作成期間で作成したアプリケーシ
 作成期間：2023/05/18〜2023/07/10(仮)
 
 
-<h2>【Meow Manor Cafe (概要)】</h2><br>
+<h2>【Meow Manor Cafe (概要)】</h2>
 会員制猫カフェの訪問予約可能ECサイト
 
 
-<h2>【実装機能リスト】</h2><br>
+<h2>【実装機能リスト】</h2>
 https://docs.google.com/spreadsheets/d/1VuuzDEXoPjr96qXRS-7shpvy57ZvtiPl3AR5WhV3ES0/edit?usp=sharing<br>
 (以下「アプリケーションの機能」内の(チャレンジ)と記載しているものに関しては、スケジュールに余裕があれば実装予定です。)
 
 
-<h2>【アプリケーションの機能】</h2><br>
-<storng>・顧客側</storng>
+<h2>【アプリケーションの機能】</h2>
+<h4>・顧客側</h4>
 
 1.サインアップ機能<br>
 ・氏名、フリガナ、メールアドレス、電話番号、パスワードの新規会員登録ができます。
@@ -51,7 +51,7 @@ https://docs.google.com/spreadsheets/d/1VuuzDEXoPjr96qXRS-7shpvy57ZvtiPl3AR5WhV3
 ・ログイン会員のみ、お気に入りの所属猫(推し猫)を登録したり、カフェのレビューを投稿することができます。
 
 
-<storng>・管理者側</storng>
+<h4>・管理者側</h4>
 
 1.ログイン機能<br>
 ・メールアドレス、パスワードでログインができます。<br>
@@ -94,22 +94,22 @@ https://docs.google.com/spreadsheets/d/1VuuzDEXoPjr96qXRS-7shpvy57ZvtiPl3AR5WhV3
 ・会員から投稿されたレビューを確認、掲載するものを選択することができます。<br>
 
 
-<h2>【設計書】</h2><br>
+<h2>【設計書】</h2>
 ※現状は空欄とさせていただきます。テーマが確定しましたらテーブル定義書等は作成予定です。
 
-<h2>【使用素材】</h2><br>
+<h2>【使用素材】</h2>
 ※現状は空欄とさせていただきます。
 
 
-<h2>【環境】</h2><br>
- <storng>〇開発環境</storng><br>
+<h2>【環境】</h2>
+ <h4>〇開発環境</h4><br>
 ・Cloud9
 
- <storng>〇フレームワーク</storng>
+ <h4>〇フレームワーク</h4><br>
 ・Ruby on Rails
 
 
-<h2>【開発者】</h2><br>
+<h2>【開発者】</h2>
 ・南野薫子
 
 
