@@ -102,10 +102,10 @@ https://docs.google.com/spreadsheets/d/1VuuzDEXoPjr96qXRS-7shpvy57ZvtiPl3AR5WhV3
 
 
 <h2>【環境】</h2>
- <h4>〇開発環境</h4><br>
+ <h4>〇開発環境</h4>
 ・Cloud9
 
- <h4>〇フレームワーク</h4><br>
+ <h4>〇フレームワーク</h4>
 ・Ruby on Rails
 
 
