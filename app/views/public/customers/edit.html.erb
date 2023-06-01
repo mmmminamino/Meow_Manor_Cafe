@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
+    <head></head>
+    <body>
+        <main>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3>会員情報編集</h3>
+                    <%= form_with model: @customer, url:public_update_path, method: :patch do |f| %>
+                    <div>
+                        <div class="col-xs-12">
+                            <%= f.label :"氏名", class: "col-sm-3 control-label", style: "margin: 10px;" %>
+                            <%= f.text_field :last_name, class: "last_name col-sm-3 form-control-static name", style: "margin: 10px;" %>
+                            <%= f.text_field :first_name, class: "last_name col-sm-3 form-control-static name",  style: "margin: 10px;" %>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-xs-12">
+                            <%= f.label :"フリガナ", class: "col-sm-3 control-label", style: "margin: 10px;" %>
+                            <%= f.text_field :last_name_kana, class: "last_name col-sm-3 form-control-static name", style: "margin: 10px;" %>
+                            <%= f.text_field :first_name_kana, class: "last_name col-sm-3 form-control-static name", style: "margin: 10px;" %>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-xs-12">
+                                <%= f.label :"電話番号(ハイフンなし)", class: "col-sm-3 control-label", style: "margin: 10px;" %>
+                                <%= f.text_field :telephone_number, style: "margin: 10px;" %>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-xs-12">
+                            <%= f.label :"メールアドレス", class: "col-sm-3 control-label", style: "margin: 10px;" %>
+                            <%= f.text_field :email, style: "margin: 10px;" %>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-xs-12">
+                            <%= f.label :"生年月日" %>
+                            <%= f.date_select :birthday, {start_year: 1950, end_year: 2016,
+                            include_blank: true, use_two_digit_numbers: true},
+                            {class: "input-tab birthday-select"} %>
+                        </div>
+                    </div>
+                    <div class="actions col-xs-10 col-xs-offset-2">
+                        <p>
+                            <%= f.submit '編集内容を保存', class: "btn btn-primary col-sm-3", style: "margin: 10px;" %>
+                        </p>
+                    </div>
+                    <%end%>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
+</html>

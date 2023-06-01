@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
+    <main>
+        <body>
+            <h2>マイページ</h2>
+            <p>
+                <h3>登録情報</h3>
+                <%= link_to "編集する", public_customers_edit_path, class: 'btn btn-default' %>
+            </p>
+            <table border="1">
+                <tr>
+                    <td class="col-xs-2">氏名</td>
+                    <td><%= current_customer.last_name %> <%= current_customer.first_name %></td>
+                </tr>
+                <tr>
+                    <td>カナ</td>
+                    <td><%= current_customer.last_name_kana %> <%=current_customer.first_name_kana %></td>
+                </tr>
+                <tr>
+                    <td>電話番号</td>
+                    <td><%= current_customer.telephone_number %></td>
+                </tr>
+                <tr>
+                    <td>メールアドレス</td>
+                    <td><%= current_customer.email %></td>
+                </tr>
+                <tr>
+                    <td>生年月日</td>
+                    <td><%= current_customer.birthday %></td>
+                </tr>
+            </table>
+        </body>
+    </main>
+</html>
+</html>

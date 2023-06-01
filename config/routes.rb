@@ -14,10 +14,14 @@ Rails.application.routes.draw do
   get '/about' => 'public/homes#about'
   
   scope module: 'customers' do
-    resources :items, only: [:show, :index]
+    resources :cats, only: [:show, :index]
    end
   
   namespace :public do
+    get '/my_page', to: 'customers#show', as: 'my_page'#マイページ
+    resources :my_page, only: [:show]
+    get 'customers/edit' => 'customers#edit'
+    patch 'update' => 'customers#update'#会員情報編集画面
   end
   
   
