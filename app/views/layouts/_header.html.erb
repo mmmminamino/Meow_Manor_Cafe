@@ -16,12 +16,15 @@
                              ようこそ、<%= current_customer.last_name + current_customer.first_name %>さん
                          </li>
                          <li><%= link_to "マイページ", public_my_page_path, class: 'nav-link text-dark' %></li>
+                         <li><%= link_to "商品一覧", public_cats_path, class: 'nav-link text-dark' %></li>
                          <li><%= link_to "About", about_path, class: 'nav-link text-dark' %></li>
                          <li><%= link_to "ログアウト", destroy_customer_session_path, method: :delete, class: 'nav-link text-dark' %></li>
                         <% elsif admin_signed_in? %>
+                         <li><%= link_to "商品一覧", admin_cats_path, class: 'nav-link text-dark' %></li>
                          <li><%= link_to "About", about_path, class: 'nav-link text-dark' %></li>
                          <li><%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: 'nav-link text-dark' %></li>
                         <%else%>
+                         <li><%= link_to "商品一覧", public_cats_path, class: 'nav-link text-dark' %></li>
                          <li><%= link_to "新規登録", new_customer_registration_path, class: 'nav-link text-dark' %></li>
                          <li><%= link_to "About", about_path, class: 'nav-link text-dark' %></li>
                          <li><%= link_to "ログイン", new_customer_session_path, class: 'nav-link text-dark' %></li>

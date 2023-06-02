@@ -22,6 +22,9 @@ Rails.application.routes.draw do
     resources :my_page, only: [:show]
     get 'customers/edit' => 'customers#edit'
     patch 'update' => 'customers#update'#会員情報編集画面
+    patch 'customers/withdraw' => 'customers#withdraw', as: 'withdraw_customer'#退会機能
+    get 'quit' => 'customers#quit'#退会画面
+    resources :cats, only: [:index, :show]#所属猫一覧画面、所属猫詳細画面
   end
   
   
