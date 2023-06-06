@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
     
+  get 'menu_items/index'
   # 顧客用
   devise_for :customers,skip: [:passwords], controllers: {
     registrations: "public/registrations",
@@ -13,9 +14,10 @@ Rails.application.routes.draw do
   root to: "public/homes#top"
   get '/about' => 'public/homes#about'
   
-  scope module: 'customers' do
-    resources :cats, only: [:show, :index]
-   end
+  # scope module: 'customers' do
+  #   resources :cats, only: [:show, :index]
+  #   resources :menu_items, only: [:index]
+  # end
   
   namespace :public do
     get '/my_page', to: 'customers#show', as: 'my_page'#マイページ
@@ -25,6 +27,8 @@ Rails.application.routes.draw do
     patch 'customers/withdraw' => 'customers#withdraw', as: 'withdraw_customer'#退会機能
     get 'quit' => 'customers#quit'#退会画面
     resources :cats, only: [:index, :show]#所属猫一覧画面、所属猫詳細画面
+    resources :menu_items, only: [:index]#カフェメニュー一覧
+    resources :reservations, only: [:index, :show]#予約情報入力画面、予約情報確認画面
   end
   
   
