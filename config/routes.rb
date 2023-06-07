@@ -40,11 +40,11 @@ Rails.application.routes.draw do
 }
    
    namespace :admin do
-    root :to => 'admin/homes#top'
-    # resources :customers, only: [:index, :show, :edit, :update]
-    # resources :items, only: [:show, :index, :new, :create, :edit, :update, :destroy]
+    root :to => 'homes#top'
+    resources :customers, only: [:index, :show, :edit, :update]
+    resources :cats, only: [:show, :index, :new, :create, :edit, :update, :destroy]
     # resources :orders, only: [:index, :show, :update]
     # resources :order_items, only: [:update]
-    # delete 'items'=> 'items#destroy'
+    delete 'cats'=> 'cats#destroy'
   end
 end
