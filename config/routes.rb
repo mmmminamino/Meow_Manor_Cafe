@@ -42,7 +42,8 @@ Rails.application.routes.draw do
    namespace :admin do
     root :to => 'homes#top'
     resources :customers, only: [:index, :show, :edit, :update]
-    resources :cats, only: [:show, :index, :new, :create, :edit, :update, :destroy]
+    resources :cats, only: [:show, :index, :new, :create, :edit, :update, :destroy]#所属猫画面
+    resources :menu_items, only: [:index, :show, :new, :create, :edit, :update, :destroy]#カフェメニュー画面
     # resources :orders, only: [:index, :show, :update]
     # resources :order_items, only: [:update]
     delete 'cats'=> 'cats#destroy'

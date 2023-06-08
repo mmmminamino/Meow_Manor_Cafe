@@ -55,9 +55,10 @@ ActiveRecord::Schema.define(version: 2023_06_06_060134) do
   create_table "cats", force: :cascade do |t|
     t.string "name", null: false
     t.string "introduction", null: false
-    t.string "gender", null: false
+    t.integer "genders", default: 0, null: false
     t.string "age", null: false
-    t.string "type", null: false
+    t.string "image_id"
+    t.string "cat_type", null: false
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
