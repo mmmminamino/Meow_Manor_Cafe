@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
+    <main>
+        <body>
+            <div class="row">
+                <div class="col-xs-10 col-xs-10 col-xs-offset-1">
+                    <h2>カフェメニュー</h2>
+                    <div class="text_right">
+                        <%= link_to "新規登録", new_admin_menu_item_path, class:"btn btn_-lg btn-primary" %>
+                    </div>
+                    <% @menu_items.each do |menu_item| %>
+                       <tr>
+                            <ul><%= menu_item.name %></ul>
+                            <ul><%= menu_item.price_without_tax %></ul>
+                            <%= link_to "編集する" ,edit_admin_menu_item_path(menu_item), class: "btn btn-primary" %>
+                        </tr>
+                    <%end%>
+                </div>
+            </div>
+        </body>
+    </main>
+</html>
+</html>

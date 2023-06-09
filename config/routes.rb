@@ -41,11 +41,11 @@ Rails.application.routes.draw do
    
    namespace :admin do
     root :to => 'homes#top'
-    resources :customers, only: [:index, :show, :edit, :update]
+    resources :customers, only: [:index, :show, :edit, :update]#会員画面
     resources :cats, only: [:show, :index, :new, :create, :edit, :update, :destroy]#所属猫画面
-    resources :menu_items, only: [:index, :show, :new, :create, :edit, :update, :destroy]#カフェメニュー画面
+    resources :menu_items, only: [:index, :new, :create, :edit, :update, :destroy]#カフェメニュー画面
     # resources :orders, only: [:index, :show, :update]
-    # resources :order_items, only: [:update]
     delete 'cats'=> 'cats#destroy'
+    delete 'menu_items'=> 'menu_items#destroy'
   end
 end
