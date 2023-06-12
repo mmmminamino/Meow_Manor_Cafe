@@ -3,10 +3,26 @@
 <html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
     <main>
         <body>
-            <h2>訪問予約をする</h2>
-            <p>予約日時を選択してください</p>
-            <p>訪問人数を選択してください</p>
-            <%= link_to "ご予約情報の確認へ", public_reservation_path, class: 'btn btn-warning col-xs-6 col-xs-offset-1'%>
+            <div class="list-head">
+                <h2><span class="label label-default">注文情報入力</span></h2>
+            </div>
+            <div class="list-body">
+                    <p>予約日時を選択してください</p>
+                    <%= month_calendar events: @reservation do |date, reservations| %>
+                    <%= date %>
+                    <% reservations.each do |reservation| %>
+                        <div>
+                          <%= reservation.start_time.hour %>:<%= reservation.start_time.min %>
+                          <%= reservation.name %>
+                        </div>
+                    <%end%>
+                    <%end%>
+                <%= form_with(url: public_reservation_path(@reservation), method: :post) do |f| %> 
+                  <p>訪問人数を選択してください</p>
+                  <%= f.text_field :number_of_people, class: "col-xs-7 form-control-static address" %>名
+                  <%= f.submit "ご予約情報の確認へ", class: 'btn btn-warning col-xs-6 col-xs-offset-1'%>
+                <%end%>
+            </div>
         </body>
     </main>
 </html>
