@@ -1,0 +1,2 @@
+module Public::ReservationStatusHelper
+end
