@@ -11,7 +11,6 @@ ja:
         payment_method:
           credit_card: "クレジットカード"
           cash: "当日現金でお支払い"
-
 ja:
   date:
     formats:

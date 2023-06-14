@@ -38,6 +38,14 @@ class Public::ReservationsController < ApplicationController
       reservation.save
     end
     
+    def confirm
+      @reservaton=Reservation.new(reservaton_params)
+      @number_of_people=NumberOfPeople.find(params[:reservaton][:number_of_people_id])
+      @reservaton.date_and_time= @number_of_people.date_and_time
+      @reservaton.number_of_people= @number_of_peoples.number_of_people
+      @reservaton.name=@number_of_people.name
+    end
+    
     private
     def reservation_params
       params.require(:reservation).permit(:payment_methods, :name, :number_of_people, :date_and_time)
