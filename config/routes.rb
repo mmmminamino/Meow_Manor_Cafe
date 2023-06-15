@@ -44,6 +44,7 @@ Rails.application.routes.draw do
     resources :customers, only: [:index, :show, :edit, :update]#会員画面
     resources :cats, only: [:show, :index, :new, :create, :edit, :update, :destroy]#所属猫画面
     resources :menu_items, only: [:index, :new, :create, :edit, :update, :destroy]#カフェメニュー画面
+    resources :reservations, only: [:index, :show]#予約一覧画面、予約詳細画面
     # resources :orders, only: [:index, :show, :update]
     delete 'cats'=> 'cats#destroy'
     delete 'menu_items'=> 'menu_items#destroy'

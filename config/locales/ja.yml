@@ -1,17 +1,15 @@
 ja:
-    enums:
-      cat:
-        gender:
-          male: "男の子"
-          female: "女の子"
-          
- ja:
-    enums:
-      order:
-        payment_method:
-          credit_card: "クレジットカード"
-          cash: "当日現金でお支払い"
-ja:
+  enums:
+    cat:
+      gender:
+        male: "男の子"
+        female: "女の子"
+        
+  order:
+    payment_method:
+      credit_card: "クレジットカード"
+      cash: "当日現金でお支払い"
+      
   date:
     formats:
       default: "%Y/%m/%d"
@@ -23,8 +21,3 @@ ja:
 
     month_names: [~, 1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月]
     abbr_month_names: [~, 1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月]
-
-    order:
-      - :year
-      - :month
-      - :day
