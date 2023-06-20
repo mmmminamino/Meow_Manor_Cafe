@@ -29,6 +29,8 @@ Rails.application.routes.draw do
     resources :cats, only: [:index, :show]#所属猫一覧画面、所属猫詳細画面
     resources :menu_items, only: [:index]#カフェメニュー一覧
     resources :reservations, only: [:index, :show]#予約情報入力画面、予約情報確認画面
+    post '/reservations' => 'reservations#index', as: 'public_reservations'#予約情報入力画面
+    get '/reservation/:id' => 'reservations#show', as: 'public_reservation'#予約情報確認画面
   end
   
   
@@ -45,7 +47,6 @@ Rails.application.routes.draw do
     resources :cats, only: [:show, :index, :new, :create, :edit, :update, :destroy]#所属猫画面
     resources :menu_items, only: [:index, :new, :create, :edit, :update, :destroy]#カフェメニュー画面
     resources :reservations, only: [:index, :show]#予約一覧画面、予約詳細画面
-    # resources :orders, only: [:index, :show, :update]
     delete 'cats'=> 'cats#destroy'
     delete 'menu_items'=> 'menu_items#destroy'
   end

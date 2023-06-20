@@ -3,21 +3,22 @@ class Public::ReservationsController < ApplicationController
     
     def index#予約情報入力画面
       @reservation=Reservation.new
-      @customer=current_customer
     end
     
     def show#予約情報確認画面
-     　@reservation=Reservation.find(params[:id])
+     　@reservations=Reservation.find(params[:id])
        @reservation_status=@reservation.reservation_status
     end
     
     def create
+        @reservation=Reservation.find(params[:id]).reservations.build(reservation_params)
+        @reservation.customer_id=current_customer.id
         # customer=current_customer
         session[:reservation]=Reservation.new
         # @customer.id = current_customer.id
         @customers= Customer.all
         @customer=current_customer
-        if session[:reservation][:name].presence
+        if session[:reservation][:name].presence && session[:order][:email].presence
           redirect_to new_public_reservation_path
         else
           redirect_to public_reservations_path
