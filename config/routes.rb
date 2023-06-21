@@ -21,19 +21,17 @@ Rails.application.routes.draw do
   
   namespace :public do
     get '/my_page', to: 'customers#show', as: 'my_page'#マイページ
-    resources :my_page, only: [:show]
     get 'customers/edit' => 'customers#edit'
     patch 'update' => 'customers#update'#会員情報編集画面
     patch 'customers/withdraw' => 'customers#withdraw', as: 'withdraw_customer'#退会機能
     get 'quit' => 'customers#quit'#退会画面
     resources :cats, only: [:index, :show]#所属猫一覧画面、所属猫詳細画面
     resources :menu_items, only: [:index]#カフェメニュー一覧
-    resources :reservations, only: [:index, :show]#予約情報入力画面、予約情報確認画面
-    post '/reservations' => 'reservations#index', as: 'public_reservations'#予約情報入力画面
-    get '/reservation/:id' => 'reservations#show', as: 'public_reservation'#予約情報確認画面
+    get '/reservations/new' => 'reservations#new', as: 'new_reservation'#予約情報入力画面
+    post '/reservations' => 'reservations#create', as: 'reservations'
+    resources :reservations, only: [:show, :index]
+    get '/reservations/thanks' => 'reservations#thanks', as: 'thanks_reservation'#サンクス
   end
-  
-  
   
   
    # 管理者用
