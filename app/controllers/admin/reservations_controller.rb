@@ -8,7 +8,6 @@ class Admin::ReservationsController < ApplicationController
     
     def show
         @reservation=Reservation.find(params[:id])
-        # @order_items=@order.order_items
     end
     
     # def update
@@ -23,6 +22,6 @@ class Admin::ReservationsController < ApplicationController
     
     private
         def reservation_params
-            params.require(:reservation).permit(:date_and_time, :number_of_people, :payment_methods, :status)
+            params.require(:reservation).permit(:date_and_time, :number_of_people, :payment_methods, :status, :customer_id, :reservation_status)
         end
-end
+    end

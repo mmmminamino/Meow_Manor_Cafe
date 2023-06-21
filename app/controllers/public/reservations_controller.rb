@@ -5,15 +5,6 @@ class Public::ReservationsController < ApplicationController
       @reservation=Reservation.new
     end
     
-    def index
-      # @reservations=current_customer.reservations
-    end
-    
-    def show#予約情報確認画面
-      @reservation=Reservation.find(params[:id])
-      @reservations=Reservation.all
-    end
-    
     def create
       @reservation = Reservation.new(reservation_params)
       if @reservation.save
@@ -23,14 +14,21 @@ class Public::ReservationsController < ApplicationController
       end
     end
     
+    def index
+      # @reservations=current_customer.reservations
+    end
+    
+    def show#予約情報確認画面
+      # @reservation=Reservation.find(params[:id])
+      @reservations=Reservation.all
+    end
+    
     def thanks #サンクスページ
-      reservation=Reservation.new
-      reservation.save
     end
     
     
     private
     def reservation_params
-      params.require(:reservation).permit(:payment_method, :name, :number_of_people, :date_and_time)
+      params.require(:reservation).permit(:payment_method, :name, :number_of_people, :date_and_time, :customer_id)
     end
 end

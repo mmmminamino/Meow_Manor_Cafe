@@ -29,8 +29,8 @@ Rails.application.routes.draw do
     resources :menu_items, only: [:index]#カフェメニュー一覧
     get '/reservations/new' => 'reservations#new', as: 'new_reservation'#予約情報入力画面
     post '/reservations' => 'reservations#create', as: 'reservations'
+    get 'reservations/thanks' => 'reservations#thanks', as: 'thanks_reservation'#サンクス
     resources :reservations, only: [:show, :index]
-    get '/reservations/thanks' => 'reservations#thanks', as: 'thanks_reservation'#サンクス
   end
   
   
