@@ -1,0 +1,31 @@
+<!--予約一覧-->
+<!DOCTYPE html>
+<html lang="ja">
+<html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
+    <main>
+      <body>
+          <div class="row">
+              <div class="col-xs-12">
+                  <h3>ご予約履歴一覧</h3>
+                  <table class="table table-hover table-inverse">
+                      <tr>
+                          <th>ご予約日</th>
+                          <th>ご予約人数</th>
+                          <th>お支払料金</th>
+                          <th>選択パック</th>
+                      </tr>
+                      <% @reservations.each do |reservation|%>
+                      <tr>
+                          <td class="col-xs-3"><%= reservation.date_and_time('%Y/%m/%d') %></td>
+                          <td class="col-xs-2">
+                              <%= reservation.number_of_people %>名様
+                              <%= reservation.payment_methods %>
+                          </td>
+                      </tr>
+                      <% end %>
+                  </table>
+              </div>
+          </div>
+      </body>
+    </main>
+</html>

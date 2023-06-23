@@ -5,11 +5,16 @@ ja:
         male: "男の子"
         female: "女の子"
         
-  order:
-    payment_method:
-      credit_card: "クレジットカード"
-      cash: "当日現金でお支払い"
-      
+    reservation:
+      payment_method:
+        credit_card: "クレジットカード"
+        cash: "当日現金でお支払い"
+      status:
+        vacancy: "ご予約可能"
+        reservation: "ご予約中"
+        completed: "訪問済み"
+        cancel: "キャンセル"
+
   date:
     formats:
       default: "%Y/%m/%d"

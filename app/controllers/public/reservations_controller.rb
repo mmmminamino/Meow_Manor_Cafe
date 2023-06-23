@@ -14,8 +14,8 @@ class Public::ReservationsController < ApplicationController
       end
     end
     
-    def index
-      # @reservations=current_customer.reservations
+    def index#予約一覧画面
+      @reservations=current_customer.reservations
     end
     
     def show#予約情報確認画面

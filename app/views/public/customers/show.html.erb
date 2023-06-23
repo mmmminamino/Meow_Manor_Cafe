@@ -1,3 +1,4 @@
+<!--マイページ-->
 <!DOCTYPE html>
 <html lang="ja">
 <html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
@@ -30,6 +31,7 @@
                     <td><%= current_customer.birthday %></td>
                 </tr>
             </table>
+            <%= link_to '過去のご予約一覧へ', public_my_page_reservations_path, class: "btn btn-default col-sm-3", style: "margin: 10px;" %>
         </body>
     </main>
 </html>
