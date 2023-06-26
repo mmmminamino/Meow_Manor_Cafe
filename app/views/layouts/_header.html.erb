@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
+        <nav class="navbar navbar-expand-lg flex-wrap bd-navbar">
+            <div class="header__float">
                 <div class="container">
-                    <a class="navbar-brand p-3" href="/" ><%= image_tag('Meow Manor Cafe-logos.jpg', size: '120x120') %></a>
+                    <a class="navbar-brand p-3" href="/" ><%= image_tag('Meow Manor Cafe-logos2.png', size: '200x67') %></a>
                     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav ml-auto pt-2 py-md-0">
                         <% if customer_signed_in? %>
                          <li style="font-family: BatangChe; margin-top: 15px;">
                              ようこそ、<%= current_customer.last_name + current_customer.first_name %>さん
                          </li>
-                         <li><%= link_to "マイページ", public_my_page_path, class: 'nav-link text-dark' %></li>
-                         <li><%= link_to "Meow Manor Cafeの猫たち", public_cats_path, class: 'nav-link text-dark' %></li>
-                         <li><%= link_to "カフェメニュー", public_menu_items_path, class: 'nav-link text-dark' %></li>
-                         <li><%= link_to "予約をする", public_new_reservation_path, class: 'nav-link text-dark' %></li>
-                         <li><%= link_to "About", about_path, class: 'nav-link text-dark' %></li>
-                         <li><%= link_to "ログアウト", destroy_customer_session_path, method: :delete, class: 'nav-link text-dark' %></li>
+                         <li class="nav-link"><%= link_to "MY PAGE", public_my_page_path, class: 'nav-link text-dark' %></li>
+                         <li class="nav-link"><%= link_to "Meow Manor Cafeの猫たち", public_cats_path, class: 'nav-link text-dark' %></li>
+                         <li class="nav-link"><%= link_to "CAFE MENU", public_menu_items_path, class: 'nav-link text-dark' %></li>
+                         <li class="nav-link"><%= link_to "ABOUT", about_path, class: 'nav-link text-dark' %></li>
+                         <li class="nav-link"><%= link_to "予約をする", public_new_reservation_path, class: 'nav-link text-dark' %></li>
+                         <li class="nav-link"><%= link_to "LOG OUT", destroy_customer_session_path, method: :delete, class: 'nav-link text-dark' %></li>
                         <% elsif admin_signed_in? %>
-                         <li><%= link_to "Meow Manor Cafeの猫たち", admin_cats_path, class: 'nav-link text-dark' %></li>
-                         <li><%= link_to "カフェメニュー", admin_menu_items_path, class: 'nav-link text-dark' %></li>
-                         <li><%= link_to "About", about_path, class: 'nav-link text-dark' %></li>
-                         <li><%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: 'nav-link text-dark' %></li>
-                         <li><%= link_to "会員一覧", admin_customers_path, class: 'nav-link text-dark' %></li>
+                         <li class="nav-link"><%= link_to "Meow Manor Cafeの猫たち", admin_cats_path, class: 'nav-link text-dark' %></li>
+                         <li class="nav-link"><%= link_to "CAFE MENU", admin_menu_items_path, class: 'nav-link text-dark' %></li>
+                         <li class="nav-link"><%= link_to "ABOUT", about_path, class: 'nav-link text-dark' %></li>
+                         <li class="nav-link"><%= link_to "LOG OUT", destroy_admin_session_path, method: :delete, class: 'nav-link text-dark' %></li>
+                         <li class="nav-link"><%= link_to "MEMBER", admin_customers_path, class: 'nav-link text-dark' %></li>
                         <%else%>
-                         <li><%= link_to "Meow Manor Cafeの猫たち", public_cats_path, class: 'nav-link text-dark' %></li>
-                         <li><%= link_to "カフェメニュー", public_menu_items_path, class: 'nav-link text-dark' %></li>
-                         <li><%= link_to "新規登録", new_customer_registration_path, class: 'nav-link text-dark' %></li>
-                         <li><%= link_to "About", about_path, class: 'nav-link text-dark' %></li>
-                         <li><%= link_to "ログイン", new_customer_session_path, class: 'nav-link text-dark' %></li>
+                         <li class="nav-link"><%= link_to "Meow Manor Cafeの猫たち", public_cats_path, class: 'nav-link text-dark' %></li>
+                         <li class="nav-link"><%= link_to "CAFE MENU", public_menu_items_path, class: 'nav-link text-dark' %></li>
+                         <li class="nav-link"><%= link_to "SIGN UP", new_customer_registration_path, class: 'nav-link text-dark' %></li>
+                         <li class="nav-link"><%= link_to "ABOUT", about_path, class: 'nav-link text-dark' %></li>
+                         <li class="nav-link"><%= link_to "LOG IN", new_customer_session_path, class: 'nav-link text-dark' %></li>
                         <%end%>
                     </ul>
                 </div>

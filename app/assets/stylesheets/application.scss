@@ -18,6 +18,8 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
 }
 
 html{
@@ -25,3 +27,50 @@ html{
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+body{
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    text-align: left;
+}
+
+.flex-wrap{
+    flex-wrap: wrap!important;
+}
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.header__float {
+  overflow: hidden;
+  clear: both;
+  line-height: 25px;
+}
+
+.container {
+  display: none;
+  float: left;
+}
+
+li{
+  float: right;
+  margin-left: 20px;
+}
+
+
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: var;
+    background-color: #fff;
+    margin: 0 auto;
+    width: 100%;
+}
