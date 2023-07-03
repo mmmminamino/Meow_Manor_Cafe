@@ -9,15 +9,16 @@ Rails.application.routes.draw do
   
   devise_scope :customer do
     post '/customers/sign_up', to: 'public/registrations#create', as: 'custom_registration'
+    get '/customers/sign_out' => 'devise/sessions#destroy'
   end
 
   root to: "public/homes#top"
   get '/about' => 'public/homes#about'
   
-  # scope module: 'customers' do
-  #   resources :cats, only: [:show, :index]
-  #   resources :menu_items, only: [:index]
-  # end
+  scope module: 'customers' do
+    resources :cats, only: [:show, :index]
+    resources :menu_items, only: [:index]
+  end
   
   namespace :public do
     get '/my_page', to: 'customers#show', as: 'my_page'#マイページ
@@ -36,9 +37,13 @@ Rails.application.routes.draw do
   
   
   # 管理者用
-  devise_for :admins, skip: [:registrations, :passwords] ,controllers: {
-    sessions: "admins/sessions"
+  devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
+    sessions: "admin/sessions"
   }
+  
+  devise_scope :admin do
+    get '/admin/sign_out' => 'devise/sessions#destroy'
+  end
    
   namespace :admin do
     root :to => 'homes#top'
