@@ -27,7 +27,7 @@ class Public::SessionsController < Devise::SessionsController
   # end
   protected
   
-  def customer_state#退会確認の
+  def customer_state#退会確認
     @customer = Customer.find_by(email: params[:customer][:email])
     return if !@customer
     if @customer.valid_password?(params[:customer][:password])
