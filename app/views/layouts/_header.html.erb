@@ -23,8 +23,8 @@
                          <li class="nav-link" style="white-space: nowrap;"><%= link_to "Meow Manor Cafeの猫たち", admin_cats_path, class: 'nav-link text-dark' %></li>
                          <li class="nav-link" style="white-space: nowrap;"><%= link_to "CAFE MENU", admin_menu_items_path, class: 'nav-link text-dark' %></li>
                          <li class="nav-link" style="white-space: nowrap;"><%= link_to "ABOUT", about_path, class: 'nav-link text-dark' %></li>
-                         <li class="nav-link" style="white-space: nowrap;"><%= link_to "LOG OUT", destroy_admin_session_path, method: :delete, class: 'nav-link text-dark' %></li>
                          <li class="nav-link" style="white-space: nowrap;"><%= link_to "MEMBER", admin_customers_path, class: 'nav-link text-dark' %></li>
+                         <li class="nav-link" style="white-space: nowrap;"><%= link_to "LOG OUT", destroy_admin_session_path, method: :delete, class: 'nav-link text-dark' %></li>
                         <%else%>
                          <li class="nav-link" style="white-space: nowrap;"><%= link_to "Meow Manor Cafeの猫たち", public_cats_path, class: 'nav-link text-dark' %></li>
                          <li class="nav-link" style="white-space: nowrap;"><%= link_to "CAFE MENU", public_menu_items_path, class: 'nav-link text-dark' %></li>
