@@ -3,16 +3,15 @@
     <header>
         <nav class="navbar navbar-expand-lg p-1">
             <div class="container">
-                    <a class="navbar-brand p-1" href="/" ><%= image_tag('Meow Manor Cafe-logos2.png', size: '280x107') %></a>
+                    <a class="navbar-brand p-1" href="/" >
+                        <%= image_tag('Meow Manor Cafe-logos2.png', size: '280x107') %>
+                    </a>
                     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 <div class="collapse navbar-collapse " id="navbarNavDropdown">
                     <ul class="navbar-nav ml-auto">
                         <% if customer_signed_in? %>
-                         <li style="font-family: BatangChe; margin-top: 15px;">
-                             ようこそ、<%= current_customer.last_name + current_customer.first_name %>さん
-                         </li>
                          <li class="nav-link" style="white-space: nowrap;"><%= link_to "MY PAGE", public_my_page_path, class: 'nav-link text-dark' %></li>
                          <li class="nav-link" style="white-space: nowrap;"><%= link_to "Meow Manor Cafeの猫たち", public_cats_path, class: 'nav-link text-dark' %></li>
                          <li class="nav-link" style="white-space: nowrap;"><%= link_to "CAFE MENU", public_menu_items_path, class: 'nav-link text-dark' %></li>
@@ -35,6 +34,11 @@
                     </ul>
                 </div>
             </div>
+            <% if customer_signed_in? %>
+                <div class="welcome-message">
+                    ようこそ、<%= current_customer.last_name + current_customer.first_name %>さん
+                </div>
+            <%end%>
         </nav>
     </header>
 </html>
