@@ -64,8 +64,6 @@ header{
 
 .container {
     width: 100%;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 .first_about_message {
@@ -85,6 +83,10 @@ li {
     white-space: nowrap;
     display: list-item;
     text-align: -webkit-match-parent;
+}
+
+.list-body{
+    margin-left: 40px;
 }
 
 .apporter-vin{
