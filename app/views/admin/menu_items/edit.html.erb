@@ -3,13 +3,10 @@
 <html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
     <main>
         <body>
+            <div class="container">
             <div class="row">
-                <div class="col-xs-10 col-xs-10 col-xs-offset-1">
-                    <div class="row">
                         <%= form_with model: @menu_item, url: admin_menu_item_path do |f| %>
-                        <div class="col-xs-5">
                             <h2>メニュー登録情報編集</h2>
-                            <div class="col-xs-5 col-xs-offset-2">
                                 <table class="table table-hover table-inverse">
                                     <tbody>
                                         <tr>
@@ -22,17 +19,11 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
-                        </div>
-                        <div class="text-right">
-                            <%= f.submit "編集する", class: "btn btn-primary text-right" %>
-                        </div>
+                          <%= f.submit "編集する", class: "btn btn_-lg btn-outline-success" %>
+                          <%= link_to "削除する", admin_menu_item_path, method: :delete, class: "btn btn_-lg btn-outline-danger" %>
                         <%end%>
-                        <div class="text-right">
-                          <%= link_to "削除する", admin_menu_item_path, method: :delete, class: "btn btn-danger" %>
-                        </div>
                     </div>
-                </div>
+            </div>
             </div>
         </body>
     </main>

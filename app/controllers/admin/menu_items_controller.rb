@@ -10,8 +10,9 @@ class Admin::MenuItemsController < ApplicationController
     end
     
     def create
-        @menu_item=MenuItem.new(params[:id])
+        @menu_item=MenuItem.new(menu_item_params)
         if @menu_item.save!
+            flash[:notice] = "新しいメニューを追加しました"
             redirect_to admin_menu_items_path(@menu_item)
         else
             redirect_to new_admin_menu_item_path
@@ -26,7 +27,7 @@ class Admin::MenuItemsController < ApplicationController
         @menu_item=MenuItem.find(params[:id])
         if @menu_item.update(menu_item_params)
             redirect_to admin_menu_items_path(@menu_item)
-            flash[:notice_update]="猫の情報を更新しました"
+            flash[:notice_update]="メニューの情報を更新しました"
         else
             redirect_to edit_admin_menu_item_path(@menu_item)
         end

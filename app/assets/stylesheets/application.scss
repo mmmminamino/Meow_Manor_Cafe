@@ -64,6 +64,7 @@ header{
 
 .container {
     width: 100%;
+    white-space: nowrap;
 }
 
 .first_about_message {
@@ -159,6 +160,10 @@ button:not(:disabled) {
 
 .input-group-text{
     margin-right: 0px;
+}
+
+.new-form-table{
+    margin-bottom: 40px;
 }
 
 .thankslogo{
