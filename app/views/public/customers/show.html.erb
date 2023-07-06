@@ -1,38 +1,34 @@
 <!--マイページ-->
-<!DOCTYPE html>
-<html lang="ja">
-<html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
-    <main>
-        <body>
-            <h2>マイページ</h2>
-            <p>
-                <h3>登録情報</h3>
-                <%= link_to "編集する", public_customers_edit_path, class: 'btn btn-default' %>
-            </p>
-            <table border="1">
-                <tr>
-                    <td class="col-xs-2">氏名</td>
-                    <td><%= current_customer.last_name %> <%= current_customer.first_name %></td>
-                </tr>
-                <tr>
-                    <td>カナ</td>
-                    <td><%= current_customer.last_name_kana %> <%=current_customer.first_name_kana %></td>
-                </tr>
-                <tr>
-                    <td>電話番号</td>
-                    <td><%= current_customer.telephone_number %></td>
-                </tr>
-                <tr>
-                    <td>メールアドレス</td>
-                    <td><%= current_customer.email %></td>
-                </tr>
-                <tr>
-                    <td>生年月日</td>
-                    <td><%= current_customer.birthday %></td>
-                </tr>
+<div class="col-xs-10 col-xs-offset-1">
+    <div class="row">
+        <div class="col-xs-7">
+            <h4>ご登録情報</h4>
+            <table class="table table-striped table-light">
+                <tbody>
+                    <tr>
+                        <th>氏名</th>
+                        <td><%= current_customer.last_name %> <%= current_customer.first_name %></td>
+                    </tr>
+                    <tr>
+                        <th>カナ</th>
+                        <td><%= current_customer.last_name_kana %> <%=current_customer.first_name_kana %></td>
+                    </tr>
+                    <tr>
+                        <th>お電話番号</th>
+                        <td><%= current_customer.telephone_number %></td>
+                    </tr>
+                    <tr>
+                        <th>メールアドレス</th>
+                        <td><%= current_customer.email %></td>
+                    </tr>
+                    <tr>
+                        <th>生年月日</th>
+                        <td><%= current_customer.birthday %></td>
+                    </tr>
+                </tbody>
             </table>
-            <%= link_to '過去のご予約一覧へ', public_my_page_reservations_path, class: "btn btn-default col-sm-3", style: "margin: 10px;" %>
-        </body>
-    </main>
-</html>
-</html>
+            <%= link_to "編集する", public_customers_edit_path, class: 'btn btn-outline-success' %>
+            <%= link_to '過去のご予約一覧へ', public_my_page_reservations_path, class: "btn btn-outline-dark", style: "margin: 10px;" %>
+        </div>
+    </div>
+</div>
