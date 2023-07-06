@@ -92,6 +92,7 @@ ActiveRecord::Schema.define(version: 2023_06_21_083238) do
 
   create_table "reservation_statuses", force: :cascade do |t|
     t.integer "reservation_id"
+    t.integer "reserve_status", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

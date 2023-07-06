@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html lang="ja">
-<html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
-    <head></head>
-    <main>
-        <body>
             <div class="col-xs-10 col-xs-offset-1">
                 <div class="row">
                     <div class="col-xs-7">
                     <h2>予約内容詳細</h2>
-                    <table class="table table-bordered table-condensed">
+                    <table class="table table-striped table-light">
                         <tbody>
                             <tr>
                                 <th>予約者氏名</th>
                                 <td>
-                                <%= link_to admin_customer_path(@reservation.customer) do %>
-                                    <%= @reservation.customer.last_name %>
-                                    <%= @reservation.customer.first_name %>
-                                <% end %>
+                                    <%= @reservation.customer.last_name %> <%= @reservation.customer.first_name %>
                                 </td>
                             </tr>
                             <tr>
@@ -34,8 +25,8 @@
                             <tr>
                                 <th>予約ステータス</th>
                                 <td><%= form_with model: @reservation, url: admin_reservation_path(@reservation) do |f| %>
-                                <%= f.select :reservation_status, Reservation.reservation_statuses.keys.to_a %>
-                                <%= f.submit "更新する", class: "btn btn-success" %>
+                                <%= f.select :reservation_status, ReservationStatus.reserve_statuses.keys.to_a %>
+                                <%= f.submit "更新する", class: "btn btn-outline-success" %>
                                 <% end %>
                                 </td>
                             </tr>
@@ -44,7 +35,3 @@
                     </div>
                 </div>
             </div>
-        </body>
-    </main>
-</html>
-</html>
