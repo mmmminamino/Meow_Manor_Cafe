@@ -7,10 +7,10 @@ class Public::ReservationsController < ApplicationController
     
     def create
       @reservation = Reservation.new(reservation_params)
-      if @reservation.save
+      if @reservation.save!
         redirect_to public_reservation_path(@reservation)
       else
-        redirect_to new_public_reservation_path
+        redirect_to public_new_reservation_path
       end
     end
     
@@ -29,6 +29,6 @@ class Public::ReservationsController < ApplicationController
     
     private
     def reservation_params
-      params.require(:reservation).permit(:payment_method, :name, :number_of_people, :date_and_time, :customer_id)
+      params.require(:reservation).permit(:customer_id, :payment_method, :number_of_people, :date_and_time)
     end
 end
