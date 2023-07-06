@@ -1,35 +1,34 @@
-<!DOCTYPE html>
-<html lang="ja">
-<html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
-    <head></head>
-    <main>
-        <body>
-              <div class="row">
-                  <div class="col-xs-10 col-xs-offset-1">
-                      <h2>予約一覧</h2>
-                        <div class="order-table">
-                            <table class="table table-hover table-inverse">
-                                <thead>
-                                    <tr>
-                                        <th>予約日時</th>
-                                        <th>予約者氏名</th>
-                                        <th>訪問日時</th>
-                                        <th>支払方法</th>
-                                        <th>入金ステータス</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <% @reservations.each do |reservation| %>
-                                        <tr>
-                                            <td><%= link_to reservation.created_at.strftime("%Y-%m-%d %H:%M:%S"), admin_reservation_path(reservation) %></td>
-                                        </tr>
+<div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+            <h2>予約一覧</h2>
+            <div class="order-table">
+                    <table class="table table-hover table-inverse">
+                        <thead>
+                            <tr>
+                                <th>予約者氏名</th>
+                                <th>予約日時</th>
+                                <th>訪問日時</th>
+                                <th>訪問人数</th>
+                                <th>支払方法</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <% @reservations.each do |reservation| %>
+                                    <% if reservation.customer.present? %>
+                                        <td><%= reservation.customer.first_name %><%= reservation.customer.last_name %>様</td>
+                                    <%else%>
+                                        <td>予約者不明</td>
                                     <%end%>
-                                    <%= paginate @reservations %>
-                                </tbody>
-                            </table>
-                        </div>
-                  </div>
-              </div>
-        </body>
-    </main>
-</html>
+                                    <td><%= reservation.created_at.strftime("%Y-%m-%d %H:%M:%S") %></td>
+                                    <td><%= reservation.date_and_time.strftime("%Y-%m-%d %H:%M:%S") %></td>
+                                    <td><%= reservation.number_of_people %>名様</td>
+                                    <td><%= reservation.payment_methods %></td>
+                                <%end%>
+                            </tr>
+                            <%= paginate @reservations %>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+</div>

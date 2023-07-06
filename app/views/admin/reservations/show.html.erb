@@ -6,9 +6,7 @@
                         <tbody>
                             <tr>
                                 <th>予約者氏名</th>
-                                <td>
-                                    <%= @reservation.customer.last_name %> <%= @reservation.customer.first_name %>
-                                </td>
+                                <td><%= @reservation.customer.last_name %> <%= @reservation.customer.first_name %></td>
                             </tr>
                             <tr>
                                 <th>予約日時</th>
@@ -16,7 +14,7 @@
                             </tr>
                             <tr>
                                 <th>訪問人数</th>
-                                <td><%= @reservation.number_of_people %>名</td>
+                                <td><%= @reservation.number_of_people %>名様</td>
                             </tr>
                             <tr>
                                 <th>支払方法</th>
