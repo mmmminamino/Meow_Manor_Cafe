@@ -11,16 +11,11 @@
                       <tr>
                           <th>ご予約日</th>
                           <th>ご予約人数</th>
-                          <th>お支払料金</th>
-                          <th>選択パック</th>
                       </tr>
                       <% @reservations.each do |reservation|%>
                       <tr>
-                          <td class="col-xs-3"><%= reservation.date_and_time('%Y/%m/%d') %></td>
-                          <td class="col-xs-2">
-                              <%= reservation.number_of_people %>名様
-                              <%= reservation.payment_methods %>
-                          </td>
+                          <td><%= reservation.date_and_time.strftime('%Y/%m/%d') %></td>
+                          <td><%= reservation.number_of_people %>名様</td>
                       </tr>
                       <% end %>
                   </table>
