@@ -1,22 +1,18 @@
-<!DOCTYPE html>
-<html lang="ja">
-<html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
-    <main>
-        <body>
-            <div class="row">
-                <div class="col-xs-10 col-xs-10 col-xs-offset-1">
-                    <h2>Meow Manor Cafeの猫たち</h2>
-                    <table class="table table-hover table-inverse">
-                        <thead>
-                            <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            </tr>
-                        </thead>
-                    </table>
+<div class="row">
+    <div class="col-xs-10 col-xs-10 col-xs-offset-1">
+        <h2>Meow Manor Cafeの猫たち</h2><p>気になる猫ちゃんがいましたら名前をクリックしてみてください！</p>
+        <div class="cat-wrap">
+            <% @cats_all.each do |cat| %>
+                <div class="cat-box">
+                    <div class="cat-img" style="margin-top: 20px;">
+                      <%= image_tag cat.image.variant( resize: "200x100^") if cat.image.attached? %>
+                    </div>
+                    <div class="cat-name">
+                      <span><%=link_to cat.name, public_cat_path(cat) %></span>
+                    </div>
                 </div>
-            </div>
-        </body>
-    </main>
+            <% end %>
+        </div>
+        <%= paginate @cats %>
+    </div>
+</div>

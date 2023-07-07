@@ -6,16 +6,19 @@ class Admin::CatsController < ApplicationController
     end
     
     def index
-        @cats=Cat.all
+        @search=Cat.ransack(params[:q])
+        @cats=@search.result.page(params[:page]).per(10)
+        @cats_all=Cat.all
     end
     
     def new
-        @cats=Cat.new
+        @cat=Cat.new
     end
     
     def create
         @cat=Cat.new(cat_params)
-        if @cat.save!
+        @cat.image.attach(params[:cat][:image])
+        if @cat.save
             redirect_to admin_cat_path(@cat)
         else
             redirect_to new_admin_cat_path
@@ -28,6 +31,7 @@ class Admin::CatsController < ApplicationController
     
     def update
         @cat=Cat.find(params[:id])
+        @cat.image.attach(params[:cat][:image])
         if @cat.update(cat_params)
             redirect_to admin_cats_path(@cat)
             flash[:notice_update]="猫の情報を更新しました"

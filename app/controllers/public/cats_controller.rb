@@ -2,7 +2,9 @@ class Public::CatsController < ApplicationController
     before_action :authenticate_customer!, only: [:create,:index, :show, :new]
     
     def index
-        @cats_all = Cat.all
+        @search=Cat.ransack(params[:q])
+        @cats=@search.result.page(params[:page]).per(10)
+        @cats_all= Cat.all
     end
     
     def show
@@ -12,6 +14,6 @@ class Public::CatsController < ApplicationController
     private
     
     def cat_params
-        params.require(:cat).permit(:name, :introduction, :price, :image, :is_active)  
+        params.require(:cat).permit(:name, :introduction, :image, :is_active, :genders, :age, :cat_type)  
     end
 end

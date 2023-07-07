@@ -173,3 +173,18 @@ button:not(:disabled) {
 .thankslogo{
     text-align: center;
 }
+
+.cat-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cat-box {
+  width: 200px;
+  height: 250px;
+  margin: 10px;
+}
+
+.cat-name {
+  width: 200px;
+}
