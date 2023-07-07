@@ -6,21 +6,20 @@ ja:
         restrict_dependent_destroy:
           has_one: "%{record}が存在しているので削除できません"
           has_many: "%{record}が存在しているので削除できません"
-
-    attributes:
-      customer:
-        last_name: "姓"
-        first_name: "名"
-        last_name_kana: "姓（カナ）"
-        first_name_kana: "名（カナ）"
-        telephone_number: "電話番号"
-        birthday: "生年月日"
-        customer: "顧客"      
-
-      reservation:
-        number_of_people: "訪問人数"
-        date_and_time: "訪問日時"
+      models:
         customer: "顧客"
+        reservation: "予約"
+      attributes:
+        customer:
+          last_name: "姓"
+          first_name: "名"
+          last_name_kana: "姓（カナ）"
+          first_name_kana: "名（カナ）"
+          telephone_number: "電話番号"
+          birthday: "生年月日"
+        reservation:
+          number_of_people: "訪問人数"
+          date_and_time: "訪問日時"
 
   enums:
     cat:
@@ -28,10 +27,6 @@ ja:
         male: "男の子"
         female: "女の子"
         
-    reservation:
-      payment_method:
-        credit_card: "クレジットカード"
-        cash: "当日現金でお支払い"
       status:
         vacancy: "ご予約可能"
         reservation: "ご予約中"

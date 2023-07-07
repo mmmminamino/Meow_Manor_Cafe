@@ -101,7 +101,6 @@ ActiveRecord::Schema.define(version: 2023_06_21_083238) do
     t.integer "customer_id"
     t.datetime "date_and_time", null: false
     t.integer "number_of_people", null: false
-    t.integer "payment_methods", default: 0, null: false
     t.integer "status", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

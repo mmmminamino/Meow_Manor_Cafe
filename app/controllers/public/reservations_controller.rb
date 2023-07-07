@@ -29,6 +29,6 @@ class Public::ReservationsController < ApplicationController
     
     private
     def reservation_params
-      params.require(:reservation).permit(:customer_id, :payment_method, :number_of_people, :date_and_time)
+      params.require(:reservation).permit(:customer_id, :number_of_people, :date_and_time)
     end
 end

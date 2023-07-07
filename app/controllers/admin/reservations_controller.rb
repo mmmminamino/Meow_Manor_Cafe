@@ -18,6 +18,6 @@ class Admin::ReservationsController < ApplicationController
     
     private
         def reservation_params
-            params.require(:reservation).permit(:customer_id, :date_and_time, :number_of_people, :payment_methods, :status)
+            params.require(:reservation).permit(:customer_id, :date_and_time, :number_of_people, :status)
         end
 end

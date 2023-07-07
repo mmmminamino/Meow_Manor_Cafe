@@ -7,30 +7,43 @@
         <div class="list-body">
             <%= form_with model: @reservation, url: public_reservations_path, method: :post do |f| %>
                 <p>ご予約内容を入力してください</p>
-                <%= f.label :ご予約者様のお名前 %>
-                (姓)<%= f.text_field :last_name, autofocus: true, placeholder:"令和" %>  (名)<%= f.text_field :first_name, autofocus: true, placeholder:"道子" %>
-                <%= f.label :フリガナ %>
-                (姓)<%= f.text_field :last_name_kana, autofocus: true, placeholder:"レイワ" %>  (名)<%= f.text_field :first_name_kana, autofocus: true, placeholder:"ミチコ" %>
-                <%= f.label :Email %>
-                <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-                <%= f.label :"電話番号(ハイフンなし)" %>
-                <%= f.text_field :telephone_number, autofocus: true, placeholder:"00000000000" %>
-                <%= f.label :"生年月日" %>
-                <%= f.date_select :birthday, {start_year: 1950, end_year: 2023,include_blank: true, use_two_digit_numbers: true},{class: "input-tab birthday-select"} %>
-                <%= f.label :number_of_people, class: "mt-2 font-weight-bold" do %>
-                    <i class="fa fa-caret-right mr-1 pp-text"></i>訪問人数を選択してください (最大5名様)
-                <% end %>
-                <%= f.select :number_of_people, (1..5).map {|num| num.to_s + "名"}, {}, {class: 'form-control'} %>
-                <%= f.label :date_and_time, class: "mt-2 font-weight-bold" do %>
-                    <i class="fa fa-caret-right mr-1 pp-text"></i>ご利用日時
-                <% end %>
-                <div class="reserve date">
-                    <%= f.date_select :date_and_time, {start_year: 2023, end_year: 2024,use_month_numbers: true},{class: "input-tab birthday-select"} %>
-                </div>
-                 <br>
-                <%= f.submit "ご予約情報の確認へ", class: 'btn btn_-lg btn-outline-dark'%>
+                <table class="table table-hover table-inverse">
+                    <tbody>
+                        <tr>
+                            <th><%= f.label :"ご予約者様のお名前" %></th>
+                            <td>(姓)<%= f.text_field :last_name, autofocus: true, placeholder:"令和" %>  (名)<%= f.text_field :first_name, autofocus: true, placeholder:"道子" %></td>
+                        </tr>
+                        <tr>
+                            <th><%= f.label :"フリガナ" %></th>
+                            <td>(姓)<%= f.text_field :last_name_kana, autofocus: true, placeholder:"レイワ" %>  (名)<%= f.text_field :first_name_kana, autofocus: true, placeholder:"ミチコ" %></td>
+                        </tr>
+                        <tr>
+                            <th><%= f.label :"メールアドレス" %></th>
+                            <td><%= f.email_field :email, autofocus: true, autocomplete: "email" %></td>
+                        </tr>
+                        <tr>
+                            <th><%= f.label :"電話番号(ハイフンなし)" %></th>
+                            <td><%= f.text_field :telephone_number, autofocus: true, placeholder:"00000000000" %></td>
+                        </tr>
+                        <tr>
+                            <th><%= f.label :"生年月日" %></th>
+                            <td><%= f.date_select :birthday, {start_year: 1950, end_year: 2023,include_blank: true, use_two_digit_numbers: true},{class: "input-tab birthday-select"} %></td>
+                        </tr>
+                        <tr>
+                            <th><%= f.label :"訪問人数を選択してください (最大5名様)  ", class: "mt-2 font-weight-bold" %><i class="fa fa-caret-right mr-1 pp-text"></i></th>
+                            <td>
+                                <%= f.select :number_of_people, (1..5).map {|num| num.to_s + "名様"}, {}, {class: 'form-control'} %>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><%= f.label :"訪問日時を入力してください  ", class: "mt-2 font-weight-bold" %><i class="fa fa-caret-right mr-1 pp-text"></i></th>
+                            <td><%= f.date_select :date_and_time, {start_year: 2023, end_year: 2024,use_month_numbers: true},{class: "input-tab birthday-select"} %></td>
+                        </tr>
+                        <%= f.hidden_field :customer_id, value: current_customer.id %>
+                    </tbody>
+                </table>
+                <%= f.submit "ご予約情報の確認へ", class: 'btn btn-lg btn-outline-dark'%>
             <%end%>
-        </div>
         </div>
     </div>
 </div>
