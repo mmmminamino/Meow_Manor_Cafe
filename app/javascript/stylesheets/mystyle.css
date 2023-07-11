@@ -14,8 +14,8 @@
  *= require_tree .
  
  */
- @use '~bootstrap/scss/bootstrap';
- @use '~@fortawesome/fontawesome-free/scss/fontawesome';
+ @import '~bootstrap/dist/css/bootstrap.min.css';
+ @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 
 * {
     font-family: 'Zen Maru Gothic', sans-serif;
@@ -37,7 +37,7 @@ body{
     line-height: 1.5;
     text-align: left;
     background-color: #ffdab9;
-    background-image: image-url("hoge.jpg");
+    background-image: url("../images/hoge.jpg");
 }
 
 .form-body{
@@ -54,7 +54,7 @@ header{
 
 .nav-link{
     font-weight: bold;
-    font-color: #696969;
+    color: #696969;
 }
 
 .welcome-message{
@@ -70,7 +70,7 @@ header{
 
 .first_about_message {
     margin-top: 50px;
-    font-color: #808000;
+    color: #808000;
 }
 
 ul{
@@ -96,7 +96,7 @@ li {
     position: relative;
     display: block;
     font-weight: bold;
-    font-color: #808000;
+    color: #808000;
     font-size: 30px;
 }
 

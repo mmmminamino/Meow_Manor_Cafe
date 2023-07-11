@@ -14,179 +14,178 @@
  *= require_tree .
  
  */
- @import 'mystyle';
- @use '~bootstrap/scss/bootstrap';
- @use '~@fortawesome/fontawesome-free/scss/fontawesome';
+//  @use '~bootstrap/scss/bootstrap';
+//  @use '~@fortawesome/fontawesome-free/scss/fontawesome';
 
-* {
-    font-family: 'Zen Maru Gothic', sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0; 
-}
+// * {
+//     font-family: 'Zen Maru Gothic', sans-serif;
+//     box-sizing: border-box;
+//     margin: 0;
+//     padding: 0; 
+// }
 
-html{
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-
-body{
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: left;
-    background-color: #ffdab9;
-    background-image: image-url("hoge.jpg");
-}
-
-.form-body{
-    background-color: #fffafa;
-}
-
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    width: 100%;
-}
-
-.nav-link{
-    font-weight: bold;
-    font-color: #696969;
-}
-
-.welcome-message{
-    white-space: nowrap;
-    font-size: 15px;
-    margin-left: 150px;
-}
-
-.container {
-    width: 100%;
-    white-space: nowrap;
-}
-
-.first_about_message {
-    margin-top: 50px;
-    font-color: #808000;
-}
-
-ul{
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-}
-
-li {
-    white-space: nowrap;
-    display: list-item;
-    text-align: -webkit-match-parent;
-}
-
-.list-body{
-    margin-left: 40px;
-}
-
-.apporter-vin{
-    text-align: center;
-    position: relative;
-    display: block;
-    font-weight: bold;
-    font-color: #808000;
-    font-size: 30px;
-}
-
-table{
-    margin-left: 20px;
-}
-.navbar{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-    background-color: #fff;
-    margin: 0 auto;
-    width: 100%;
-    z-index: 9999;
-}
+// html{
+//     -webkit-text-size-adjust: 100%;
+//     -webkit-tap-highlight-color: rgba(0,0,0,0);
+// }
 
 
-.navbar-nav{
-    display: flex;
-    flex-direction: column;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-}
+// body{
+//     margin: 0;
+//     font-size: 1rem;
+//     font-weight: 400;
+//     line-height: 1.5;
+//     text-align: left;
+//     background-color: #ffdab9;
+//     background-image: image-url("hoge.jpg");
+// }
 
-.collapse:not(.show) {
-    display: none;
-}
+// .form-body{
+//     background-color: #fffafa;
+// }
 
-.navbar-collapse {
-    flex-basis: 100%;
-    flex-grow: 1;
-    align-items: center;
-}
+// header{
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     z-index: 10;
+//     width: 100%;
+// }
 
-button:not(:disabled) {
-    cursor: pointer;
-}
+// .nav-link{
+//     font-weight: bold;
+//     font-color: #696969;
+// }
 
-.navbar-toggler {
-    padding: 0.25rem 0.25rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    background-color: #f5f5f5;
-    border: 1px solid transparent;
-    border-radius: 0.3rem;
-}
+// .welcome-message{
+//     white-space: nowrap;
+//     font-size: 15px;
+//     margin-left: 150px;
+// }
 
-.navbar-toggler:hover, .navbar-toggler:focus {
-    text-decoration: none;
-}
+// .container {
+//     width: 100%;
+//     white-space: nowrap;
+// }
 
-.navbar-toggler-icon {
-    display: inline;
-    margin-left: 15px;
-    margin-right: 15px;
-    width: 1.5em;
-    height: 1.5em;
-    vertical-align: middle;
-    content: "";
-    background: 50% / 100% 100% no-repeat;
-    color: #d3d3d3;
-}
+// .first_about_message {
+//     margin-top: 50px;
+//     font-color: #808000;
+// }
 
-.input-group-text{
-    margin-right: 0px;
-}
+// ul{
+//     margin-block-start: 1em;
+//     margin-block-end: 1em;
+//     margin-inline-start: 0px;
+//     margin-inline-end: 0px;
+//     padding-inline-start: 40px;
+// }
 
-.new-form-table{
-    margin-bottom: 40px;
-}
+// li {
+//     white-space: nowrap;
+//     display: list-item;
+//     text-align: -webkit-match-parent;
+// }
 
-.thankslogo{
-    text-align: center;
-}
+// .list-body{
+//     margin-left: 40px;
+// }
 
-.cat-wrap {
-  display: flex;
-  flex-wrap: wrap;
-}
+// .apporter-vin{
+//     text-align: center;
+//     position: relative;
+//     display: block;
+//     font-weight: bold;
+//     font-color: #808000;
+//     font-size: 30px;
+// }
 
-.cat-box {
-  width: 200px;
-  height: 250px;
-  margin: 10px;
-}
+// table{
+//     margin-left: 20px;
+// }
+// .navbar{
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-items: center;
+//     justify-content: space-between;
+//     padding: 0.5rem 1rem;
+//     background-color: #fff;
+//     margin: 0 auto;
+//     width: 100%;
+//     z-index: 9999;
+// }
 
-.cat-name {
-  width: 200px;
-}
+
+// .navbar-nav{
+//     display: flex;
+//     flex-direction: column;
+//     padding-left: 0;
+//     margin-bottom: 0;
+//     list-style: none;
+// }
+
+// .collapse:not(.show) {
+//     display: none;
+// }
+
+// .navbar-collapse {
+//     flex-basis: 100%;
+//     flex-grow: 1;
+//     align-items: center;
+// }
+
+// button:not(:disabled) {
+//     cursor: pointer;
+// }
+
+// .navbar-toggler {
+//     padding: 0.25rem 0.25rem;
+//     font-size: 1.25rem;
+//     line-height: 1;
+//     background-color: #f5f5f5;
+//     border: 1px solid transparent;
+//     border-radius: 0.3rem;
+// }
+
+// .navbar-toggler:hover, .navbar-toggler:focus {
+//     text-decoration: none;
+// }
+
+// .navbar-toggler-icon {
+//     display: inline;
+//     margin-left: 15px;
+//     margin-right: 15px;
+//     width: 1.5em;
+//     height: 1.5em;
+//     vertical-align: middle;
+//     content: "";
+//     background: 50% / 100% 100% no-repeat;
+//     color: #d3d3d3;
+// }
+
+// .input-group-text{
+//     margin-right: 0px;
+// }
+
+// .new-form-table{
+//     margin-bottom: 40px;
+// }
+
+// .thankslogo{
+//     text-align: center;
+// }
+
+// .cat-wrap {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
+
+// .cat-box {
+//   width: 200px;
+//   height: 250px;
+//   margin: 10px;
+// }
+
+// .cat-name {
+//   width: 200px;
+// }
