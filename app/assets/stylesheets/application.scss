@@ -29,6 +29,10 @@ html{
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+.d-flex {
+    display: flex !important;
+    background-color: #ffdab9;
+}
 
 body{
     margin: 0;
@@ -36,7 +40,6 @@ body{
     font-weight: 400;
     line-height: 1.5;
     text-align: left;
-    background-color: #ffdab9;
 }
 
 .form-body{

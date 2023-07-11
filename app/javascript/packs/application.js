@@ -9,8 +9,8 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
 import "jquery";
-import "bootstrap";
 import "popper.js";
+import "bootstrap";
 import "../stylesheets/application"; 
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import "../stylesheets/application" 
