@@ -1,0 +1,277 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ 
+ */
+@use '~bootstrap/scss/bootstrap';
+@use '~@fortawesome/fontawesome-free/scss/fontawesome';
+/* line 20, app/assets/stylesheets/application.scss */
+* {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 27, app/assets/stylesheets/application.scss */
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* line 33, app/assets/stylesheets/application.scss */
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  background-color: #ffdab9;
+  background-image: url(/images/hoge.jpg);
+}
+
+/* line 43, app/assets/stylesheets/application.scss */
+.form-body {
+  background-color: #fffafa;
+}
+
+/* line 47, app/assets/stylesheets/application.scss */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+/* line 55, app/assets/stylesheets/application.scss */
+.nav-link {
+  font-weight: bold;
+  font-color: #696969;
+}
+
+/* line 60, app/assets/stylesheets/application.scss */
+.welcome-message {
+  white-space: nowrap;
+  font-size: 15px;
+  margin-left: 150px;
+}
+
+/* line 66, app/assets/stylesheets/application.scss */
+.container {
+  width: 100%;
+  white-space: nowrap;
+}
+
+/* line 71, app/assets/stylesheets/application.scss */
+.first_about_message {
+  margin-top: 50px;
+  font-color: #808000;
+}
+
+/* line 76, app/assets/stylesheets/application.scss */
+ul {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+/* line 84, app/assets/stylesheets/application.scss */
+li {
+  white-space: nowrap;
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+/* line 90, app/assets/stylesheets/application.scss */
+.list-body {
+  margin-left: 40px;
+}
+
+/* line 94, app/assets/stylesheets/application.scss */
+.apporter-vin {
+  text-align: center;
+  position: relative;
+  display: block;
+  font-weight: bold;
+  font-color: #808000;
+  font-size: 30px;
+}
+
+/* line 103, app/assets/stylesheets/application.scss */
+table {
+  margin-left: 20px;
+}
+
+/* line 106, app/assets/stylesheets/application.scss */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 9999;
+}
+
+/* line 119, app/assets/stylesheets/application.scss */
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+/* line 127, app/assets/stylesheets/application.scss */
+.collapse:not(.show) {
+  display: none;
+}
+
+/* line 131, app/assets/stylesheets/application.scss */
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+}
+
+/* line 137, app/assets/stylesheets/application.scss */
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+/* line 141, app/assets/stylesheets/application.scss */
+.navbar-toggler {
+  padding: 0.25rem 0.25rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: #f5f5f5;
+  border: 1px solid transparent;
+  border-radius: 0.3rem;
+}
+
+/* line 150, app/assets/stylesheets/application.scss */
+.navbar-toggler:hover, .navbar-toggler:focus {
+  text-decoration: none;
+}
+
+/* line 154, app/assets/stylesheets/application.scss */
+.navbar-toggler-icon {
+  display: inline;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: 50% / 100% 100% no-repeat;
+  color: #d3d3d3;
+}
+
+/* line 166, app/assets/stylesheets/application.scss */
+.input-group-text {
+  margin-right: 0px;
+}
+
+/* line 170, app/assets/stylesheets/application.scss */
+.new-form-table {
+  margin-bottom: 40px;
+}
+
+/* line 174, app/assets/stylesheets/application.scss */
+.thankslogo {
+  text-align: center;
+}
+
+/* line 178, app/assets/stylesheets/application.scss */
+.cat-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 183, app/assets/stylesheets/application.scss */
+.cat-box {
+  width: 200px;
+  height: 250px;
+  margin: 10px;
+}
+
+/* line 189, app/assets/stylesheets/application.scss */
+.cat-name {
+  width: 200px;
+}
+/* line 1, app/assets/stylesheets/admin/cats.scss */
+.row {
+  margin-top: 180px;
+}
+
+/* line 5, app/assets/stylesheets/admin/cats.scss */
+.col-xs-5 {
+  margin-top: 180px;
+}
+
+/* line 9, app/assets/stylesheets/admin/cats.scss */
+h4 {
+  margin-bottom: 30px;
+}
+
+/* line 13, app/assets/stylesheets/admin/cats.scss */
+.new-cats {
+  margin-top: 30px;
+}
+
+/* line 17, app/assets/stylesheets/admin/cats.scss */
+.show-cats {
+  margin-top: 180px;
+}
+
+/* line 21, app/assets/stylesheets/admin/cats.scss */
+.edit-cats {
+  margin-top: 30px;
+}
+
+/* line 25, app/assets/stylesheets/admin/cats.scss */
+span {
+  margin-left: 80px;
+  margin-right: 50px;
+}
+
+/* line 30, app/assets/stylesheets/admin/cats.scss */
+tbody {
+  padding-left: 40px;
+}
+
+/* line 34, app/assets/stylesheets/admin/cats.scss */
+td {
+  padding-top: 20px;
+  width: 250px;
+}
+
+/* line 39, app/assets/stylesheets/admin/cats.scss */
+.text-right {
+  margin-top: 30px;
+  margin-left: 0;
+}
+/* line 5, app/assets/stylesheets/admin/homes.scss */
+.top-introduction {
+  margin-top: 20px;
+}
+/* line 5, app/assets/stylesheets/public/homes.scss */
+.top-introduction {
+  margin-top: 20px;
+}
