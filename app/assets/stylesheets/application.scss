@@ -75,6 +75,10 @@ header{
     font-color: #808000;
 }
 
+.carousel-inner{
+    margin-top: 20px;
+}
+
 ul{
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -102,9 +106,6 @@ li {
     font-size: 30px;
 }
 
-table{
-    margin-left: 20px;
-}
 .navbar{
     display: flex;
     flex-wrap: wrap;
