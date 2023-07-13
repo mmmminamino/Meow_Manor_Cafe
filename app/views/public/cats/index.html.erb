@@ -5,7 +5,7 @@
             <% @cats_all.each do |cat| %>
                 <div class="cat-box">
                     <div class="cat-img" style="margin-top: 20px;">
-                      <%= image_tag cat.image.variant( resize: "200x100^") if cat.image.attached? %>
+                      <%= image_tag asset_path(cat.image, :width =>'200', :height =>'100') if cat.image.attached? %>
                     </div>
                     <div class="cat-name">
                       <span><%=link_to cat.name, public_cat_path(cat) %></span>
