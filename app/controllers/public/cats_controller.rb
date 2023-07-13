@@ -1,5 +1,4 @@
 class Public::CatsController < ApplicationController
-    before_action :authenticate_customer!, only: [:create,:index, :show, :new]
     
     def index
         @search=Cat.ransack(params[:q])

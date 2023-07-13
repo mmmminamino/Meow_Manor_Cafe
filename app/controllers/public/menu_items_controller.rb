@@ -1,5 +1,4 @@
 class Public::MenuItemsController < ApplicationController
-  before_action :authenticate_customer!, only: [:index]
   
   
   def index
