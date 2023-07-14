@@ -11,11 +11,13 @@
                       <tr>
                           <th>ご予約日</th>
                           <th>ご予約人数</th>
+                          <th>ご予約状況</th>
                       </tr>
                       <% @reservations.each do |reservation|%>
                       <tr>
                           <td><%= reservation.date_and_time.strftime('%Y/%m/%d') %></td>
                           <td><%= reservation.number_of_people %>名様</td>
+                          <td><%= reservation.status %></td>
                       </tr>
                       <% end %>
                   </table>

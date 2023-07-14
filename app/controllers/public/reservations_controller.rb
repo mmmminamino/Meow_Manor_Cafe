@@ -19,8 +19,8 @@ class Public::ReservationsController < ApplicationController
     end
     
     def show#予約情報確認画面
-      # @reservation=Reservation.find(params[:id])
-      @reservations=Reservation.all
+      @reservation=Reservation.find(params[:id])
+      # @reservations=current_customer.reservations
     end
     
     def thanks #サンクスページ

@@ -37,7 +37,7 @@
                         </tr>
                         <tr>
                             <th><%= f.label :"訪問日時を入力してください  ", class: "mt-2 font-weight-bold" %><i class="fa fa-caret-right mr-1 pp-text"></i></th>
-                            <td><%= f.date_select :date_and_time, {start_year: 2023, end_year: 2024,use_month_numbers: true},{class: "input-tab birthday-select"} %></td>
+                            <td><%= f.datetime_select :date_and_time, {start_year: 2023, end_year: 2024,use_month_numbers: true},{class: "input-tab birthday-select"} %></td>
                         </tr>
                         <%= f.hidden_field :customer_id, value: current_customer.id %>
                     </tbody>

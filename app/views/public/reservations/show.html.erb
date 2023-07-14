@@ -17,19 +17,17 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <% @reservations.each do |reservation| %>
                                 <tr>
                                     <td class="text-left">
-                                        <%= reservation.date_and_time %>
+                                        <%= @reservation.date_and_time %>
                                     </td>
                                     <td class="text-right">
-                                        <%= reservation.number_of_people %>名様
+                                        <%= @reservation.number_of_people %>名様
                                     </td>
                                     <td class="text-right">
                                         <%= current_customer.first_name %><%= current_customer.last_name %>様
                                     </td>
                                 </tr>
-                            <%end%>
                         </tbody>
                     </table>
                     <div class="col-xs-4 col-xs-offset-4">
