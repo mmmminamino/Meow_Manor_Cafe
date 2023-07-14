@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   
   devise_scope :customer do
     post '/customers/sign_up', to: 'public/registrations#create', as: 'custom_registration'
-    get '/customers/sign_out' => 'devise/sessions#destroy'
+    delete '/customers/sign_out' => 'devise/sessions#destroy'
   end
 
   root to: "public/homes#top"
