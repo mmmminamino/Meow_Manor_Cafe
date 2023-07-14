@@ -7,25 +7,23 @@
                             <tr>
                                 <th>予約者氏名</th>
                                 <th>予約日時</th>
-                                <th>訪問日時</th>
                                 <th>訪問人数</th>
-                                <th>支払方法</th>
+                                <th>訪問状況</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <% @reservations.each do |reservation| %>
                             <tr>
-                                <% @reservations.each do |reservation| %>
-                                    <% if reservation.customer.present? %>
-                                        <td><%= reservation.customer.first_name %><%= reservation.customer.last_name %>様</td>
-                                    <%else%>
-                                        <td>予約者不明</td>
-                                    <%end%>
-                                    <td><%= reservation.created_at.strftime("%Y-%m-%d %H:%M:%S") %></td>
-                                    <td><%= reservation.date_and_time.strftime("%Y-%m-%d %H:%M:%S") %></td>
-                                    <td><%= reservation.number_of_people %>名様</td>
-                                    <td><%= reservation.payment_methods %></td>
+                                <% if reservation.customer.present? %>
+                                    <td><%= reservation.customer.first_name %><%= reservation.customer.last_name %>様</td>
+                                <%else%>
+                                    <td>予約者不明</td>
                                 <%end%>
+                                <td><%= reservation.date_and_time.strftime("%Y-%m-%d %H:%M:%S") %></td>
+                                <td><%= reservation.number_of_people %>名様</td>
+                                <td><%= reservation.status %></td>
                             </tr>
+                            <%end%>
                             <%= paginate @reservations %>
                         </tbody>
                     </table>
