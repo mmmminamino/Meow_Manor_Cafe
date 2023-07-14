@@ -63,6 +63,16 @@ header{
     background-color: #fffafa;
 }
 
+
+//トップページ
+.i-flex{
+    width: 100%;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+
+//サインアップ後ヘッダーメッセージ
 .welcome-message{
     white-space: nowrap;
     font-size: 15px;
@@ -74,9 +84,6 @@ header{
     font-color: #808000;
 }
 
-.carousel-inner{
-    margin-top: 20px;
-}
 
 ul{
     margin-block-start: 1em;
@@ -195,3 +202,5 @@ button:not(:disabled) {
 .cat-name {
   width: 200px;
 }
+
+

@@ -42,7 +42,7 @@ Rails.application.routes.draw do
   }
   
   devise_scope :admin do
-    get '/admin/sign_out' => 'devise/sessions#destroy'
+    delete '/admin/sign_out' => 'devise/sessions#destroy'
   end
    
   namespace :admin do
