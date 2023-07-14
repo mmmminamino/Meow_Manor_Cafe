@@ -3,6 +3,11 @@
 </div>
 <div class="top-introduction">
     <div class="col-lg-12">
+        <% if customer_signed_in? %>
+            <div class="welcome-message">
+                ようこそ、<%= current_customer.last_name + current_customer.first_name %>さん！
+            </div>
+        <%end%></br>
         <h6 class="text-center">『Meow Manor Cafe』は猫とお客様が安心してリラックスできる、</h6>
         <h6 class="text-center">会員予約制のキャットカフェです。</h6>
         <h6 class="text-center">是非当店の猫たちの邸宅に遊びに来てください。</h6>
