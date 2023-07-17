@@ -17,6 +17,7 @@
                                 <td><%= link_to cat.name, admin_cat_path(cat) %></td>
                                 <td><%= cat.cat_type %></td>
                                 <td><%= cat.age %>才</td>
+                                <td><%= link_to "編集する" ,edit_admin_cat_path(cat), class: "btn btn_-lg btn-outline-success" %></td>
                             </tr>
                             <%end%>
                         </tbody>
